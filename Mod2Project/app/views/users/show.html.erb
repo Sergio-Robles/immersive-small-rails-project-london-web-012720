@@ -1,0 +1,12 @@
+<h1> Welcome <%= @user.name %></h1> 
+
+<p>“You have power over your mind - not outside events. Realize this, and you will find strength.”
+― Marcus Aurelius, Meditations</p>
+
+<% @armies.each do |army| %>
+    <div class="army">
+      <span><%= army.name %></span>
+    <%= link_to "Edit", army, method: :edit %> - <%= link_to "Delete", army, method: :delete, data: { confirm: "Really?" } %>
+    </div>
+    <% end %>
+
