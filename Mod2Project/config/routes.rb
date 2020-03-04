@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
   resources :users
   resources :armies 
-  resources :army_units 
+  resources :army_units
+  # resources :army_units do 
+  #   resources :armies 
+  # end 
+
   resources :units 
   resources :unit_types 
   

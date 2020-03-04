@@ -9,7 +9,6 @@ class ArmiesController < ApplicationController
     end 
 
     def create 
- 
         @army = Army.create(army_params)
         redirect_to new_army_unit_path
     end 
@@ -19,16 +18,17 @@ class ArmiesController < ApplicationController
     end 
 
 
-    def edit 
-        @army = Army.find(params[:id])
-        redirect_to edit_army_unit_path 
-    end 
+    # def edit 
+    #     @army = Army.find(params[:id])
+    #     redirect_to edit_army_unit_path
+    # end 
 
-    def update 
-        @army = Army.find(params[:id])
-        @army.update(army_params)
-        redirect_to army_path(@army)
-    end
+    # def update 
+    #     @army = Army.find(params[:id])
+    #     @army.update(army_params)
+         
+        
+    # end
 
     def destroy
         Army.find(params[:id]).destroy

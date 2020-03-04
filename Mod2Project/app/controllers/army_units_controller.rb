@@ -18,7 +18,7 @@ class ArmyUnitsController < ApplicationController
     def create 
         @army_unit = ArmyUnit.create(army_unit_params)
         #LOOK AT NESTED ROUTING?
-        redirect_to army_unit_path 
+        redirect_to army_unit.army 
     end 
 
     def show 
@@ -31,8 +31,8 @@ class ArmyUnitsController < ApplicationController
 
     def update 
         @army_unit = ArmyUnit.find(params[:id])
-        @army.update(army_unit_params)
-        # redirect_to 
+        @army_unit.update(army_unit_params)
+        # redirect_to
     end 
 
 
