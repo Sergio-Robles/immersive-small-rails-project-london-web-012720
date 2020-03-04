@@ -22,7 +22,7 @@ class SessionsController < ApplicationController
   def destroy
     session.delete :current_user_id
     @current_user = nil
-    redirect_to '/'
+    redirect_to '/login'
   end
 
 end
